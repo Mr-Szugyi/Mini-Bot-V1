@@ -1,8 +1,8 @@
 package frc.robot.subsystems;
 
 // Import necessary classes for motor control and dashboard display
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkLowLevel.MotorType;
+import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -14,8 +14,8 @@ public class DriveSubsystem extends SubsystemBase {
     private final double defaultSpeedLimit = DriveSubsystemConstants.defaultSpeedLimit;
 
     // Motor controllers for the left and right sides of the drivetrain
-    private final CANSparkMax leftMotor;
-    private final CANSparkMax rightMotor;
+    private final SparkMax leftMotor;
+    private final SparkMax rightMotor;
 
     // DifferentialDrive handles arcade and tank drive logic
     private final DifferentialDrive differentialDrive;
@@ -26,8 +26,8 @@ public class DriveSubsystem extends SubsystemBase {
     // Constructor to initialize the subsystem and hardware components
     public DriveSubsystem() {
         // Initialize the left and right motors
-        leftMotor = new CANSparkMax(DriveSubsystemConstants.canLeftMotor, MotorType.kBrushless);
-        rightMotor = new CANSparkMax(DriveSubsystemConstants.canRightMotor, MotorType.kBrushless);
+        leftMotor = new SparkMax(DriveSubsystemConstants.canLeftMotor, MotorType.kBrushless);
+        rightMotor = new SparkMax(DriveSubsystemConstants.canRightMotor, MotorType.kBrushless);
 
         // Create a DifferentialDrive object to manage motor control
         differentialDrive = new DifferentialDrive(leftMotor, rightMotor);
