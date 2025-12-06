@@ -34,8 +34,8 @@ public class RobotContainer {
     private final MoveMotor motorCommand = new MoveMotor(motorSubsystem); // Command to move a motor
 
     // Controller for driver input
-    private final CommandPS4Controller driverController =
-        new CommandPS4Controller(ControllerConstants.DriverPort);
+    private final CommandXboxController driverController =
+        new CommandXboxController(ControllerConstants.DriverPort);
 
     /**
      * The constructor for the RobotContainer.

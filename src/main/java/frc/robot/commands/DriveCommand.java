@@ -4,13 +4,13 @@ package frc.robot.commands;
 // Import necessary classes
 import frc.robot.subsystems.DriveSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.CommandPS4Controller;
+//import edu.wpi.first.wpilibj2.command.button.CommandPS4Controller;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 public class DriveCommand extends Command {
     // Subsystems and controller for controlling the robot
     private final DriveSubsystem driveSubsystem; // The robot's drivetrain
-    private final CommandPS4Controller controller; // Interface for controller inputs
+    private final CommandXboxController controller; // Interface for controller inputs
     private final DriveMode driveMode; // Selected drive mode
 
     // Enum representing the available driving modes
@@ -19,7 +19,7 @@ public class DriveCommand extends Command {
     }
 
     // Constructor to set up the command with required subsystems and drive mode
-    public DriveCommand(DriveMode driveMode, DriveSubsystem driveSubsystem, CommandPS4Controller controller) {
+    public DriveCommand(DriveMode driveMode, DriveSubsystem driveSubsystem, CommandXboxController controller) {
         this.driveSubsystem = driveSubsystem;
         this.controller = controller;
         this.driveMode = driveMode;
