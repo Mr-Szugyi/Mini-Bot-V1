@@ -13,7 +13,7 @@ public class Motor extends SubsystemBase{
     }
 
     public void runMotor(){
-        driveMotor.set(.5);
+        driveMotor.set(.45);
     }
 
     public void stopMotor() {
